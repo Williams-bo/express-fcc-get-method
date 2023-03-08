@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: 'SF Pro Display', sans-serif;  
+        scroll-behavior: smooth                                        
+    }
+  }
+  @layer components {
+    .btn {
+      @apply px-8 py-4 text-white text-sm;
+    }
+    .btn-xl{
+        @apply  px-4 py-3 text-xs max-w-fit min-w-[7rem] font-medium text-center text-white md:min-w-[10rem] md:text-base;
+    } 
+    .container-gradient-border {
+      border-right: 0.5px solid;
+      border-image: linear-gradient(0deg, rgb(0, 0, 0), rgb(253, 252, 252), rgb(0, 0, 0)) 2;
+  }
+    .child-gradient-border{
+      border-bottom: 0.5px solid;
+      border-image: linear-gradient(90deg, rgb(0, 0, 0), rgb(253, 252, 252), rgb(0, 0, 0)) 2;
+  }
+    .nav-tile{
+      @apply rounded-full absolute top-0 left-0 h-[2px] w-6 bg-white;
+   }
+    .container-bg{
+      background: #F4F2FE;
+      border-radius: 32px;  
+   }
+  }
