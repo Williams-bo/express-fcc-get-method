@@ -46,7 +46,7 @@
 <script setup>
 import whatsapp from '../../assets/images/icons/whatsapp.svg'
 import mail from '../../assets/images/icons/mail.svg'
-import propLogoWhite from '../../assets/images/icons/propLogoWhite.svg'
+import propLogoWhite from '../../assets/images/icons/propLogowhite.svg'
 import twitter from '../../assets/images/icons/twitter.svg'
 import instagram from '../../assets/images/icons/instagram.svg'
 import facebook from '../../assets/images/icons/facebook.svg'
