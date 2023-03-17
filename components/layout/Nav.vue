@@ -44,7 +44,7 @@
                 <div class="md:hidden ">
                     <div class="flex items-center rounded-md justify-center px-3 py-4 bg-veryDarkBlue">
 
-                        <button id="menu-btn" @click="toggleNav"
+                        <button id="menu-btn" @click="toggleNav" name="open nav bar"
                             class="block relative w-6 h-4  transition-all md:hidden focus:outline-none"
                             :class="(showNav) ? 'open' : ''">
                             <span class="hamburger-top rounded-full absolute top-0 left-0 h-[2px] w-6 bg-white"></span>

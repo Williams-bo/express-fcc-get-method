@@ -1,15 +1,18 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxtjs/tailwindcss"],
+  modules: ["@nuxtjs/apollo", "nuxt-gtag", "@nuxtjs/tailwindcss"],
 
-  // apollo: {
-  //   clients: {
-  //     default: {
-  //       httpEndpoint: 'http://52.12.111.247:3000/graphql'
-  //     }
-  //   },
-  // },
-
+  apollo: {
+    clients: {
+      default: {
+        httpEndpoint: "http://52.12.111.247:3000/graphql",
+      },
+    },
+  },
+  gtag: {
+    id: process.env.GOOGLE_ANALYTICS_ID,
+  },
+ 
   app: {
     head: {
       title: "Ire Centenum",
@@ -33,6 +36,7 @@ export default defineNuxtConfig({
           href: "./favicon.png",
         },
       ],
+      script: [],
     },
   },
 });
