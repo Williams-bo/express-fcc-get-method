@@ -15,9 +15,9 @@
 
 
                 <div class="flex space-x-3 justify-start">
-                    <Button text="Book inspection" @click="setForm('Book inspection')"
+                    <Button name="Book inspection" text="Book inspection" @click="setForm('Book inspection')"
                         design="btn-xl bg-veryDarkBlue rounded-full" />
-                    <Button text="Request a call" @click="setForm('Request a call')"
+                    <Button name="Request a call" text="Request a call" @click="setForm('Request a call')"
                         design="btn-xl bg-white text-veryDarkBlue rounded-full" />
                 </div>
 
@@ -55,12 +55,12 @@
         <div class="py-10 lg:py-20">
             <div class="overflow-hidden ">
                 <div class="h-auto w-[500vw] lg:w-[150rem] img-slide1">
-                    <img :src="slideImg1" alt="properties" class="h-[20vh]">
+                    <img :src="slideImg1" alt="properties" class="h-[20vh]" >
                 </div>
             </div>
             <div class="mt-5 overflow-hidden">
                 <div class="h-auto  w-[500vw]  lg:w-[150rem] img-slide2 ">
-                    <img :src="slideImg2" alt="properties" class=" h-[17vh]">
+                    <img :src="slideImg2" alt="properties" class=" h-[17vh]" >
                 </div>
             </div>
         </div>

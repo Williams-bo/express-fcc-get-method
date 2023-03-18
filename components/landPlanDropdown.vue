@@ -5,7 +5,7 @@
                 {{ name }}
             </p>
 
-            <button @click="showDrop" class="relative flex items-center justify-center h-8 w-8">
+            <button name="land description" @click="showDrop" class="relative flex items-center justify-center h-8 w-8">
                 <span class="absolute bg-primaryGrey h-[2px] w-4">
                 </span>
                 <span class="absolute transition-all duration-500 bg-primaryGrey h-[2px] w-4"

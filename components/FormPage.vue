@@ -39,9 +39,9 @@
                             <textarea name="enquiry" v-model="formResult.message"
                                 placeholder="e.g: Hello, I'm intested in the 400sqm package,  i'll like to make enquiries about..."
                                 class="w-full bg-[#F7F7F7] mt-3 rounded-xl border-0 placeholder-gray-600 h-[20vh] lg:h-[10vh]
-                                              focus:placeholder-gray-500 focus:border focus:border-veryDarkBlue focus:ring-0 focus:outline-none">
+                                                  focus:placeholder-gray-500 focus:border focus:border-veryDarkBlue focus:ring-0 focus:outline-none">
 
-                                </textarea>
+                                    </textarea>
                         </div>
 
                         <button class="bg-veryDarkBlue text-white w-full lg:w-fit px-10 lg:px-20 py-4 rounded-xl">
