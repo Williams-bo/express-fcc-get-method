@@ -25,8 +25,13 @@
                 </div>
 
                 <div class="flex space-x-3 justify-start">
-                    <Button @click="setForm('Get Started')" text="Get Started →" design="btn-xl bg-veryDarkBlue text-xs md:text-sm rounded-full" />
-                    <Button text="Download brochure ↓" design="btn-xl bg-white text-veryDarkBlue text-xs md:text-sm  rounded-full" />
+                    <Button @click="setForm('Get Started')" text="Get Started →"
+                        design="btn-xl bg-veryDarkBlue text-xs md:text-sm rounded-full" />
+
+                    <a href="https://drive.google.com/u/0/uc?id=10cYRLWCzworrQHs3juKl7MEOwR6zM5Lw&export=download"> 
+                        <Button text="Download brochure ↓"
+                        design="btn-xl bg-white text-veryDarkBlue text-xs md:text-sm  rounded-full" />
+                    </a>
                 </div>
 
             </div>
@@ -73,9 +78,12 @@
 
         <div class="w-full h-fit lg:h-[60vh] flex flex-col lg:flex-row justify-center items-center mt-5 lg:space-x-10">
             <div class=" flex flex-col justify-evenly  min-h-[50vh]">
-                <LandPlanDropdown name="300 SQM (Half Plot)" offer="You'll also get a Receipt, Contract of Sale and Global C of O." price="₦5,000,000" />
-                <LandPlanDropdown name="450 SQM (3 Quarter Plot)" offer="You'll also get a Receipt, Contract of Sale and Global C of O." price="₦7,500,000" />
-                <LandPlanDropdown name="600 SQM (Full Plot)" offer="You'll also get a Receipt, Contract of Sale and Global C of O." price="₦9,000,000" />
+                <LandPlanDropdown name="300 SQM (Half Plot)"
+                    offer="You'll also get a Receipt, Contract of Sale and Global C of O." price="₦5,000,000" />
+                <LandPlanDropdown name="450 SQM (3 Quarter Plot)"
+                    offer="You'll also get a Receipt, Contract of Sale and Global C of O." price="₦7,500,000" />
+                <LandPlanDropdown name="600 SQM (Full Plot)"
+                    offer="You'll also get a Receipt, Contract of Sale and Global C of O." price="₦9,000,000" />
             </div>
 
             <div class="h-[20rem] lg:h-[50vh]">
@@ -103,15 +111,13 @@ import irePoster from '../../assets/images/pictures/irePoster.png'
 const modalState = useModalState()
 
 
-const setForm = (title) =>{
+const setForm = (title) => {
     modalState.value.showForm = true
     modalState.value.formTitle = title
 }
 
 </script>
 
-<style  scoped>
-.remove-scrollbar::-webkit-scrollbar {
+<style  scoped>.remove-scrollbar::-webkit-scrollbar {
     display: none;
-}
-</style>
+}</style>

@@ -25,7 +25,7 @@
 
             <div
                 class="relative flex justify-start items-start min-h-[40vh] max-h-fit w-full md:w-[35rem] md:block md:h-fit">
-                <div class="relative">
+                <div class="h-full relative">
                     <img :src="propsImg" alt="props" class="w-[20rem] md:w-full">
                     <button @click="playVideo"
                         class="play-btn absolute overflow-hidden flex items-center bg-white rounded-large bottom-4 md:bottom-[2.6rem] left-3 md:left-[2rem]">
@@ -106,7 +106,7 @@ const scroll = (section) => {
 
 <style scoped>
 .play-btn {
-    animation: play 3s ease .5s 1 forwards;
+    animation: play 3s ease 1s 1 forwards;
 }
 
 .img-slide1 {
