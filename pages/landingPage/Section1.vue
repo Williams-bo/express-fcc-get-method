@@ -38,7 +38,11 @@
                 </div>
                 <div v-show="showVideo" class="absolute top-0 h-full w-full bg-[#F4F2FE] flex justify-center items-center">
                     <div class="bg-[#F4F2FE] flex justify-center items-center h-[70%] w-full  lg:h-1/2">
-                        <iframe src="https://drive.google.com/file/d/1Qxz42cS5PGchLad3j8VgSaNZ6UQd7ajq/preview" title="Quick view of Ire" width="100%" height="100%" allow="autoplay"></iframe>
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/2jPAYEOWjwI?mute=1"
+                            title="Ire video" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
                     </div>
                 </div>
             </div>
@@ -57,12 +61,12 @@
         <div class="py-10 lg:py-20">
             <div class="overflow-hidden ">
                 <div class="h-auto w-[500vw] lg:w-[150rem] img-slide1">
-                    <img :src="slideImg1" alt="properties" class="h-[20vh]" >
+                    <img :src="slideImg1" alt="properties" class="h-[20vh]">
                 </div>
             </div>
             <div class="mt-5 overflow-hidden">
                 <div class="h-auto  w-[500vw]  lg:w-[150rem] img-slide2 ">
-                    <img :src="slideImg2" alt="properties" class=" h-[17vh]" >
+                    <img :src="slideImg2" alt="properties" class=" h-[17vh]">
                 </div>
             </div>
         </div>
@@ -89,7 +93,7 @@ const playVideo = () => {
     showVideo.value = true
     setTimeout(() => {
         showVideo.value = false
-    }, 100000)
+    }, 150000)
 }
 
 const setForm = (title) => {
