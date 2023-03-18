@@ -28,9 +28,9 @@
                     <Button @click="setForm('Get Started')" text="Get Started →"
                         design="btn-xl bg-veryDarkBlue text-xs md:text-sm rounded-full" />
 
-                    <a href="https://drive.google.com/u/0/uc?id=10cYRLWCzworrQHs3juKl7MEOwR6zM5Lw&export=download"> 
+                    <a href="https://drive.google.com/u/0/uc?id=10cYRLWCzworrQHs3juKl7MEOwR6zM5Lw&export=download">
                         <Button text="Download brochure ↓"
-                        design="btn-xl bg-white text-veryDarkBlue text-xs md:text-sm  rounded-full" />
+                            design="btn-xl bg-white text-veryDarkBlue text-xs md:text-sm  rounded-full" />
                     </a>
                 </div>
 
@@ -118,6 +118,8 @@ const setForm = (title) => {
 
 </script>
 
-<style  scoped>.remove-scrollbar::-webkit-scrollbar {
+<style  scoped>
+.remove-scrollbar::-webkit-scrollbar {
     display: none;
-}</style>
+}
+</style>
