@@ -36,8 +36,10 @@
                         </div>
                     </button>
                 </div>
-                <div v-show="showVideo" class="absolute top-0 h-full bg-[#F4F2FE] flex justify-center items-center">
-                    <video :src="ireVideo" controls class=""></video>
+                <div v-show="showVideo" class="absolute top-0 h-full w-full bg-[#F4F2FE] flex justify-center items-center">
+                    <div class="bg-[#F4F2FE] flex justify-center items-center h-[70%] w-full  lg:h-1/2">
+                        <iframe src="https://drive.google.com/file/d/1Qxz42cS5PGchLad3j8VgSaNZ6UQd7ajq/preview" title="Quick view of Ire" width="100%" height="100%" allow="autoplay"></iframe>
+                    </div>
                 </div>
             </div>
         </div>
@@ -80,7 +82,6 @@ import propsImg from '../../assets/images/pictures/propsImg.png'
 import slideImg1 from '../../assets/images/pictures/slideImg1.png'
 import slideImg2 from '../../assets/images/pictures/slideImg2.png'
 import play from '../../assets/images/icons/Player.svg'
-import ireVideo from '../../assets/video/ireVideo.mp4'
 const modalState = useModalState()
 const showVideo = ref(false)
 
