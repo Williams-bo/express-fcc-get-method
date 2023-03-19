@@ -28,20 +28,17 @@
                         <FormComponent labelText="Preferable day of the week" :require=true placeholder="Select"
                             name="prefered-date" type="date" v-model="formResult.preferedDate" />
                         <FormComponent labelText="Preferable time" :require=true placeholder="Select" name="prefered-time"
-                            type="" v-model="formResult.preferedTime" />
+                            type="time" v-model="formResult.preferedTime" />
                         <FormComponent labelText="Plot size interested in" :require=false placeholder="e.g: 600 SQM"
                             name="plot-size" type="text" v-model="formResult.plotSize" />
-
-
-
                         <div class="w-full">
                             <label for="">Message/Enquiry</label>
                             <textarea name="enquiry" v-model="formResult.message"
                                 placeholder="e.g: Hello, I'm intested in the 400sqm package,  i'll like to make enquiries about..."
                                 class="w-full bg-[#F7F7F7] mt-3 rounded-xl border-0 placeholder-gray-600 h-[20vh] lg:h-[10vh]
-                                                  focus:placeholder-gray-500 focus:border focus:border-veryDarkBlue focus:ring-0 focus:outline-none">
+                                                          focus:placeholder-gray-500 focus:border focus:border-veryDarkBlue focus:ring-0 focus:outline-none">
 
-                                    </textarea>
+                                            </textarea>
                         </div>
 
                         <button class="bg-veryDarkBlue text-white w-full lg:w-fit px-10 lg:px-20 py-4 rounded-xl">
