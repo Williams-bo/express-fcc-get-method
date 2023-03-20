@@ -55,7 +55,18 @@
 
 <script setup>
 import close from '../assets/images/icons/close.svg'
+
 const modalState = useModalState()
+
+const CREATE_FORM_REQUEST = gql`
+  mutation CreateFormRequest($input: FormRequestInput!) {
+    createFormRequest(input: $input) {
+      id
+      data
+      title
+    }
+  }
+`;
 
 const formResult = ref({
     name: '',
@@ -67,9 +78,16 @@ const formResult = ref({
     message: '',
 })
 
-const submitForm = () => {
+// destructure useMutation composable to obtain mutate frunction and rename it to `addComment`
+const { mutate: addFormRequest } = useMutation(CREATE_FORM_REQUEST, formResult.value );
 
-    console.log(formResult)
+const submitForm = async () => {
+    // call addFormRequest function to add comment
+    //random number
+    const random = Math.floor(Math.random() * 10000);
+    const { data } = await addFormRequest( {input: {data:formResult.value, title:`Book Inspection for IRE ${random}`} } );
+
+    modalState.value.showForm = false;
 }
 
 </script>
