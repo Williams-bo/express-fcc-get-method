@@ -83,9 +83,7 @@ const { mutate: addFormRequest } = useMutation(CREATE_FORM_REQUEST, formResult.v
 
 const submitForm = async () => {
     // call addFormRequest function to add comment
-    //random number
-    const random = Math.floor(Math.random() * 10000);
-    const { data } = await addFormRequest( {input: {data:formResult.value, title:`Book Inspection for IRE ${random}`} } );
+    const { data } = await addFormRequest( {input: {data:formResult.value, title:"Book_Inspection_For_IRE"} } );
 
     modalState.value.showForm = false;
 }
