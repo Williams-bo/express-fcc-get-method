@@ -28,7 +28,7 @@
                 <div class="h-full relative">
                     <img :src="propsImg" alt="props" class="w-[20rem] md:w-full">
                     <button @click="playVideo"
-                        class="play-btn absolute overflow-hidden flex items-center bg-white rounded-large bottom-4 md:bottom-[2.6rem] left-3 md:left-[2rem]">
+                        class="play-btn w-[5rem] absolute overflow-hidden flex items-center bg-white rounded-large bottom-4 md:bottom-[2.6rem] left-3 md:left-[2rem]">
                         <img :src="play" alt="play" class="w-[5rem]">
                         <div class=" overflow-hidden">
                             <p class="text-darkGrey w-[8rem]">Quick view of Ire</p>
