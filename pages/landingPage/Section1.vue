@@ -79,6 +79,7 @@
     </section>
 
     <FormPage />
+    <SuccessModal />
 </template>
 
 <script setup>
@@ -86,6 +87,7 @@ import propsImg from '../../assets/images/pictures/propsImg.png'
 import slideImg1 from '../../assets/images/pictures/slideImg1.png'
 import slideImg2 from '../../assets/images/pictures/slideImg2.png'
 import play from '../../assets/images/icons/Player.svg'
+
 const modalState = useModalState()
 const showVideo = ref(false)
 
@@ -103,8 +105,6 @@ const setForm = (title) => {
 const scroll = (section) => {
     window.document.body.firstChild.children[0].children[1].children[section].scrollIntoView({ behavior: "smooth" })
 }
-
-
 
 </script>
 

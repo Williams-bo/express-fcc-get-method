@@ -30,4 +30,7 @@
       background: #F4F2FE;
       border-radius: 32px;  
    }
+   .select-input{
+    @apply border-0 text-base px-3 py-3 rounded w-full text-veryDarkBlue bg-[#F7F7F7] ring-0  placeholder-gray-600 focus:placeholder-gray-500 focus:border focus:border-veryDarkBlue focus:ring-0 focus:outline-none;
   }
+}

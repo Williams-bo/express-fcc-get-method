@@ -1,8 +1,7 @@
+const formSettings = {
+  showForm: false,
+  formTitle: "Request a Call",
+  showSuccessModal: false,
+};
 
-const formSettings ={
-    showForm: false,
-    formTitle: 'Request a Call'
-}
-
-export const useModalState = () =>
-  useState("modal-state", () => formSettings);
+export const useModalState = () => useState("modal-state", () => formSettings);
