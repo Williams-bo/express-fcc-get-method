@@ -815,7 +815,7 @@ const renderer$1 = /*#__PURE__*/Object.freeze({
   default: renderer
 });
 
-const _virtual__headStatic = {"headTags":"<meta charset=\"utf-8\">\n<title>Ire Centenum</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<meta name=\"description\" content=\"Powered by nature and technology, but created with you in mind\">\n<meta name=\"format-detection\" content=\"telephone=no\">\n<link rel=\"stylesheet\" href=\"https://fonts.cdnfonts.com/css/sf-pro-display\">\n<link rel=\"icon\" type=\"image/png\" href=\"./favicon.png\">","bodyTags":"","bodyTagsOpen":"","htmlAttrs":"","bodyAttrs":""};
+const _virtual__headStatic = {"headTags":"<meta charset=\"utf-8\">\n<title>Ire Centenum</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<meta name=\"description\" content=\"Powered by nature and technology, but created with you in mind\">\n<meta name=\"format-detection\" content=\"telephone=no\">\n<link rel=\"stylesheet\" href=\"https://fonts.cdnfonts.com/css/sf-pro-display\">\n<link rel=\"icon\" type=\"image/png\" href=\"./favicon.png\">\n<script src=\"./googleAnalytics.js\"></script>","bodyTags":"","bodyTagsOpen":"","htmlAttrs":"","bodyAttrs":""};
 
 const _virtual__headStatic$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,

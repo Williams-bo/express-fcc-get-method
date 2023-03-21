@@ -38,7 +38,11 @@ export default defineNuxtConfig({
           href: "./favicon.png",
         },
       ],
-      script: [],
+      script: [
+        {
+          src: './googleAnalytics.js'
+        }
+      ],
     },
   },
 });
