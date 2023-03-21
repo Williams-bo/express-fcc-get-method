@@ -1,12 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxtjs/apollo", "nuxt-gtag", "@nuxtjs/tailwindcss"],
+  modules: ["@nuxtjs/apollo", "nuxt-gtag", "@nuxtjs/tailwindcss", '@cssninja/nuxt-toaster'],
 
   apollo: {
     clients: {
       default: {
         httpEndpoint: process.env.NODE_ENV === 'production'
-          ? 'http://52.12.111.247:3000/graphql'
+          ? 'https://wildcard-vety3kdfea-uc.a.run.app/graphql'
           : 'http://localhost:3000/graphql',
       },
     },

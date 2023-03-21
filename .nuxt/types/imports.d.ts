@@ -7,6 +7,7 @@ declare global {
   const clearNuxtData: typeof import('../../node_modules/nuxt/dist/app')['clearNuxtData']
   const computed: typeof import('vue')['computed']
   const createError: typeof import('../../node_modules/nuxt/dist/app')['createError']
+  const createNinjaToaster: typeof import('../../node_modules/@cssninja/nuxt-toaster/dist/runtime/create')['createNinjaToaster']
   const customRef: typeof import('vue')['customRef']
   const defineAppConfig: typeof import('../../node_modules/nuxt/dist/app')['defineAppConfig']
   const defineAsyncComponent: typeof import('vue')['defineAsyncComponent']
@@ -99,6 +100,8 @@ declare global {
   const useModalState: typeof import('../../composables/modalState')['useModalState']
   const useMutation: typeof import('@vue/apollo-composable')['useMutation']
   const useMutationLoading: typeof import('@vue/apollo-composable')['useMutationLoading']
+  const useNinjaToasterProgress: typeof import('../../node_modules/@cssninja/nuxt-toaster/dist/runtime/composables/useNinjaToasterState')['useNinjaToasterProgress']
+  const useNinjaToasterState: typeof import('../../node_modules/@cssninja/nuxt-toaster/dist/runtime/composables/useNinjaToasterState')['useNinjaToasterState']
   const useNuxtApp: typeof import('../../node_modules/nuxt/dist/app')['useNuxtApp']
   const useNuxtData: typeof import('../../node_modules/nuxt/dist/app')['useNuxtData']
   const useQuery: typeof import('@vue/apollo-composable')['useQuery']
@@ -141,6 +144,7 @@ declare module 'vue' {
     readonly clearNuxtData: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['clearNuxtData']>
     readonly computed: UnwrapRef<typeof import('vue')['computed']>
     readonly createError: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['createError']>
+    readonly createNinjaToaster: UnwrapRef<typeof import('../../node_modules/@cssninja/nuxt-toaster/dist/runtime/create')['createNinjaToaster']>
     readonly customRef: UnwrapRef<typeof import('vue')['customRef']>
     readonly defineAppConfig: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['defineAppConfig']>
     readonly defineAsyncComponent: UnwrapRef<typeof import('vue')['defineAsyncComponent']>
@@ -233,6 +237,8 @@ declare module 'vue' {
     readonly useModalState: UnwrapRef<typeof import('../../composables/modalState')['useModalState']>
     readonly useMutation: UnwrapRef<typeof import('@vue/apollo-composable')['useMutation']>
     readonly useMutationLoading: UnwrapRef<typeof import('@vue/apollo-composable')['useMutationLoading']>
+    readonly useNinjaToasterProgress: UnwrapRef<typeof import('../../node_modules/@cssninja/nuxt-toaster/dist/runtime/composables/useNinjaToasterState')['useNinjaToasterProgress']>
+    readonly useNinjaToasterState: UnwrapRef<typeof import('../../node_modules/@cssninja/nuxt-toaster/dist/runtime/composables/useNinjaToasterState')['useNinjaToasterState']>
     readonly useNuxtApp: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['useNuxtApp']>
     readonly useNuxtData: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['useNuxtData']>
     readonly useQuery: UnwrapRef<typeof import('@vue/apollo-composable')['useQuery']>

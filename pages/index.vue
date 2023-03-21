@@ -9,6 +9,10 @@
 
 <script setup>
 
+const { $nt } = useNuxtApp()
+console.log($nt)
+$nt.show('Hello world')
+
 import Section1 from './landingPage/Section1.vue';
 import Section2 from './landingPage/Section2.vue';
 import Section3 from './landingPage/Section3.vue';

@@ -8,4 +8,6 @@ export { useTrackEvent } from '../node_modules/nuxt-gtag/dist/runtime/composable
 export { gql } from 'graphql-tag';
 export { useApollo, useAsyncQuery, useLazyAsyncQuery } from '../node_modules/@nuxtjs/apollo/dist/runtime/composables';
 export { useQuery, useLazyQuery, useMutation, useSubscription, useApolloClient, useQueryLoading, useMutationLoading, useSubscriptionLoading, useGlobalQueryLoading, useGlobalMutationLoading, useGlobalSubscriptionLoading } from '@vue/apollo-composable';
+export { useNinjaToasterState, useNinjaToasterProgress } from '../node_modules/@cssninja/nuxt-toaster/dist/runtime/composables/useNinjaToasterState';
+export { createNinjaToaster } from '../node_modules/@cssninja/nuxt-toaster/dist/runtime/create';
 export { definePageMeta } from '../node_modules/nuxt/dist/pages/runtime/composables';
