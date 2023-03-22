@@ -49,7 +49,7 @@ export default defineNuxtConfig({
       ],
       noscript: [
         {
-          textContent: `<img
+          innerHTML: `<img
           height="1"
           width="1"
           style="display:none"
