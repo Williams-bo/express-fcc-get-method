@@ -14,7 +14,7 @@ export default defineNuxtConfig({
   gtag: {
     id: process.env.GOOGLE_ANALYTICS_ID,
   },
- 
+
   app: {
     head: {
       title: "Ire Centenum",
@@ -40,8 +40,21 @@ export default defineNuxtConfig({
       ],
       script: [
         {
-          src: './googleAnalytics.js'
-        }
+          src: "./googleAnalytics.js",
+        },
+        {
+          src: "./metaPixel.js",
+        },
+      ],
+      noscript: [
+        {
+          innerHTML: `<img
+          height="1"
+          width="1"
+          style="display:none"
+          src="https://www.facebook.com/tr?id=148745654488888&ev=PageView&noscript=1"
+        />`,
+        },
       ],
     },
   },
