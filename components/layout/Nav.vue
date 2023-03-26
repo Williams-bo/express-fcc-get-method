@@ -61,14 +61,12 @@
             <Transition>
                 <div class="md:hidden absolute w-full left-0 z-30" v-show="showNav">
                     <div id="menu"
-                        class="w-full bg-clip-padding text-veryDarkBlue min-h-[50vh] bg-[#F4F2FE] backdrop-filter backdrop-blur-xl bg-opacity-60 flex flex-col items-start text-xl self-end space-y-10 font-bold px-6 drop-shadow-md">
-                        <NuxtLink @click="toggleNav" class=" ">
-                        </NuxtLink>
-                        <NuxtLink @click="scroll(3)" class="">Features
+                        class="w-full bg-clip-padding text-veryDarkBlue py-10 bg-[#F4F2FE] backdrop-filter backdrop-blur-xl bg-opacity-60 flex flex-col items-start text-xl self-end space-y-10 font-bold px-8 drop-shadow-md">
+                        <NuxtLink @click="scroll(4)" class="">Features
                         </NuxtLink>
                         <NuxtLink @click="scroll(1)" class="">Gallery
                         </NuxtLink>
-                        <NuxtLink @click="scroll(6)" class="">FAQs
+                        <NuxtLink @click="scroll(7)" class="">FAQs
                         </NuxtLink>
                         <NuxtLink @click=" modalState.showForm = true, toggleNav" class="">Contact us
                         </NuxtLink>
