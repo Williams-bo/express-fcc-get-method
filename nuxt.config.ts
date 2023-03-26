@@ -41,6 +41,10 @@ export default defineNuxtConfig({
       ],
       script: [
         {
+          src: "https://www.googleoptimize.com/optimize.js?id=OPT-KJ87392",
+          tagPriority: "high",
+        },
+        {
           src: "./googleAnalytics.js",
         },
         {
