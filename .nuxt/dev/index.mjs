@@ -5,7 +5,7 @@ import { join } from 'node:path';
 import { mkdirSync } from 'node:fs';
 import { parentPort, threadId } from 'node:worker_threads';
 import { provider, isWindows } from 'file:///Users/mac/Desktop/ire/node_modules/std-env/dist/index.mjs';
-import { defineEventHandler, handleCacheHeaders, createEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, getRequestHeaders, setResponseHeader, createError, getQuery, readBody, handleCors, createApp, createRouter as createRouter$1, toNodeListener, fetchWithEvent, lazyEventHandler } from 'file:///Users/mac/Desktop/ire/node_modules/h3/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, createEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, getRequestHeaders, setResponseHeader, createApp, createRouter as createRouter$1, toNodeListener, fetchWithEvent, lazyEventHandler, getQuery, createError } from 'file:///Users/mac/Desktop/ire/node_modules/h3/dist/index.mjs';
 import { createRenderer } from 'file:///Users/mac/Desktop/ire/node_modules/vue-bundle-renderer/dist/runtime.mjs';
 import devalue from 'file:///Users/mac/Desktop/ire/node_modules/@nuxt/devalue/dist/devalue.mjs';
 import { renderToString } from 'file:///Users/mac/Desktop/ire/node_modules/vue/server-renderer/index.mjs';
@@ -20,11 +20,8 @@ import { createStorage } from 'file:///Users/mac/Desktop/ire/node_modules/unstor
 import unstorage_47drivers_47fs from 'file:///Users/mac/Desktop/ire/node_modules/unstorage/drivers/fs.mjs';
 import defu from 'file:///Users/mac/Desktop/ire/node_modules/defu/dist/defu.mjs';
 import { toRouteMatcher, createRouter } from 'file:///Users/mac/Desktop/ire/node_modules/radix3/dist/index.mjs';
-import cache from 'file:///Users/mac/Desktop/ire/node_modules/memory-cache/index.js';
-import { performance } from 'perf_hooks';
-import { FilterXSS } from 'file:///Users/mac/Desktop/ire/node_modules/xss/lib/index.js';
 
-const _runtimeConfig = {"app":{"baseURL":"/","buildAssetsDir":"/_nuxt/","cdnURL":""},"nitro":{"envPrefix":"NUXT_","routeRules":{"/__nuxt_error":{"cache":false},"/**":{"headers":{"Cross-Origin-Resource-Policy":"same-origin","Cross-Origin-Opener-Policy":"same-origin","Cross-Origin-Embedder-Policy":"unsafe-none","Content-Security-Policy":"base-uri 'self'; font-src 'self' https: data:; form-action 'self'; frame-ancestors 'self'; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com https://www.facebook.com https://embed.tawk.to; object-src 'none'; script-src-attr 'none'; style-src 'self' https: 'unsafe-inline'; upgrade-insecure-requests; script-src  https://www.googleanalytics.com https://www.google-analytics.com https://www.googleoptimize.com https://www.googletagmanager.com https://embed.tawk.to https://connect.facebook.net https://cdn.jsdelivr.net 'self' 'unsafe-inline'","Origin-Agent-Cluster":"?1","Referrer-Policy":"no-referrer","Strict-Transport-Security":"max-age=15552000; includeSubDomains","X-Content-Type-Options":"nosniff","X-DNS-Prefetch-Control":"off","X-Download-Options":"noopen","X-Frame-Options":"SAMEORIGIN","X-Permitted-Cross-Domain-Policies":"none","X-XSS-Protection":"0","Permissions-Policy":"camera=(), display-capture=(), fullscreen=(), geolocation=(), microphone=()"},"security":{"requestSizeLimiter":{"maxRequestSizeInBytes":2000000,"maxUploadFileRequestInBytes":8000000,"throwError":true},"rateLimiter":{"tokensPerInterval":150,"interval":"hour","fireImmediately":true,"throwError":true},"xssValidator":{"throwError":true},"corsHandler":{"origin":"http://localhost:3000","methods":["GET","HEAD","PUT","PATCH","POST","DELETE"],"preflight":{"statusCode":204},"throwError":true},"allowedMethodsRestricter":{"0":"*"},"undefined":{}}}}},"public":{"gtag":{"id":"G-6S8HQWDEPZ","config":""}},"private":{"basicAuth":false},"security":{"headers":{"crossOriginResourcePolicy":"same-origin","crossOriginOpenerPolicy":"same-origin","crossOriginEmbedderPolicy":"unsafe-none","contentSecurityPolicy":{"base-uri":["'self'"],"font-src":["'self'","https:","data:"],"form-action":["'self'"],"frame-ancestors":["'self'"],"img-src":["'self'","data:","https://www.google-analytics.com","https://www.googletagmanager.com","https://www.facebook.com","https://embed.tawk.to"],"object-src":["'none'"],"script-src-attr":["'none'"],"style-src":["'self'","https:","'unsafe-inline'"],"upgrade-insecure-requests":true,"script-src":[" https://www.googleanalytics.com","https://www.google-analytics.com","https://www.googleoptimize.com","https://www.googletagmanager.com","https://embed.tawk.to","https://connect.facebook.net","https://cdn.jsdelivr.net","'self'","'unsafe-inline'"]},"originAgentCluster":"?1","referrerPolicy":"no-referrer","strictTransportSecurity":{"maxAge":15552000,"includeSubdomains":true},"xContentTypeOptions":"nosniff","xDNSPrefetchControl":"off","xDownloadOptions":"noopen","xFrameOptions":"SAMEORIGIN","xPermittedCrossDomainPolicies":"none","xXSSProtection":"0","permissionsPolicy":{"camera":["()"],"display-capture":["()"],"fullscreen":["()"],"geolocation":["()"],"microphone":["()"]}},"requestSizeLimiter":{"maxRequestSizeInBytes":2000000,"maxUploadFileRequestInBytes":8000000,"throwError":true},"rateLimiter":{"tokensPerInterval":150,"interval":"hour","fireImmediately":true,"throwError":true},"xssValidator":{"throwError":true},"corsHandler":{"origin":"http://localhost:3000","methods":["GET","HEAD","PUT","PATCH","POST","DELETE"],"preflight":{"statusCode":204},"throwError":true},"allowedMethodsRestricter":"*","hidePoweredBy":true,"enabled":true,"csrf":false}};
+const _runtimeConfig = {"app":{"baseURL":"/","buildAssetsDir":"/_nuxt/","cdnURL":""},"nitro":{"envPrefix":"NUXT_","routeRules":{"/__nuxt_error":{"cache":false}}},"public":{"gtag":{"id":"G-6S8HQWDEPZ","config":""}}};
 const ENV_PREFIX = "NITRO_";
 const ENV_PREFIX_ALT = _runtimeConfig.nitro.envPrefix ?? process.env.NITRO_ENV_PREFIX ?? "_";
 const getEnv = (key) => {
@@ -365,18 +362,8 @@ function getRouteRulesForPath(path) {
   return defu({}, ..._routeRulesMatcher.matchAll(path).reverse());
 }
 
-const _F8XdC6HRQE = (function(nitro) {
-  nitro.hooks.hook("render:response", (response) => {
-    if (response.headers["x-powered-by"]) {
-      delete response.headers["x-powered-by"];
-    } else if (response.headers["X-Powered-By"]) {
-      delete response.headers["X-Powered-By"];
-    }
-  });
-});
-
 const plugins = [
-  _F8XdC6HRQE
+  
 ];
 
 function defineRenderHandler(handler) {
@@ -497,367 +484,10 @@ const errorHandler = (async function errorhandler(error, event) {
   event.node.res.end(await res.text());
 });
 
-function buildAssetsURL(...path) {
-  return joinURL(publicAssetsURL(), useRuntimeConfig().app.buildAssetsDir, ...path);
-}
-function publicAssetsURL(...path) {
-  const publicBase = useRuntimeConfig().app.cdnURL || useRuntimeConfig().app.baseURL;
-  return path.length ? joinURL(publicBase, ...path) : publicBase;
-}
-
-const FILE_UPLOAD_HEADER = "multipart/form-data";
-const _giT3OP = defineEventHandler(async (event) => {
-  const routeRules = getRouteRules(event);
-  if (routeRules.security.requestSizeLimiter !== false) {
-    if (["POST", "PUT", "DELETE"].includes(event.node.req.method)) {
-      const contentLengthValue = getRequestHeader(event, "content-length");
-      const contentTypeValue = getRequestHeader(event, "content-type");
-      const isFileUpload = contentTypeValue?.includes(FILE_UPLOAD_HEADER);
-      const requestLimit = isFileUpload ? routeRules.security.requestSizeLimiter.maxUploadFileRequestInBytes : routeRules.security.requestSizeLimiter.maxRequestSizeInBytes;
-      if (parseInt(contentLengthValue) >= requestLimit) {
-        const payloadTooLargeError = {
-          statusCode: 413,
-          statusMessage: "Payload Too Large"
-        };
-        if (routeRules.security.requestSizeLimiter.throwError === false) {
-          return payloadTooLargeError;
-        }
-        throw createError(payloadTooLargeError);
-      }
-    }
-  }
-});
-
-// generate timestamp or delta
-// see http://nodejs.org/api/process.html#process_process_hrtime
-function hrtime(previousTimestamp) {
-    const clocktime = performance.now() * 1e-3;
-    let seconds = Math.floor(clocktime);
-    let nanoseconds = Math.floor((clocktime % 1) * 1e9);
-    if (previousTimestamp != undefined) {
-        seconds = seconds - previousTimestamp[0];
-        nanoseconds = nanoseconds - previousTimestamp[1];
-        if (nanoseconds < 0) {
-            seconds--;
-            nanoseconds += 1e9;
-        }
-    }
-    return [seconds, nanoseconds];
-}
-// The current timestamp in whole milliseconds
-function getMilliseconds() {
-    const [seconds, nanoseconds] = hrtime();
-    return seconds * 1e3 + Math.floor(nanoseconds / 1e6);
-}
-// Wait for a specified number of milliseconds before fulfilling the returned promise.
-function wait(ms) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
-/**
- * A hierarchical token bucket for rate limiting. See
- * http://en.wikipedia.org/wiki/Token_bucket for more information.
- *
- * @param options
- * @param options.bucketSize Maximum number of tokens to hold in the bucket.
- *  Also known as the burst rate.
- * @param options.tokensPerInterval Number of tokens to drip into the bucket
- *  over the course of one interval.
- * @param options.interval The interval length in milliseconds, or as
- *  one of the following strings: 'second', 'minute', 'hour', day'.
- * @param options.parentBucket Optional. A token bucket that will act as
- *  the parent of this bucket.
- */
-class TokenBucket {
-    constructor({ bucketSize, tokensPerInterval, interval, parentBucket }) {
-        this.bucketSize = bucketSize;
-        this.tokensPerInterval = tokensPerInterval;
-        if (typeof interval === "string") {
-            switch (interval) {
-                case "sec":
-                case "second":
-                    this.interval = 1000;
-                    break;
-                case "min":
-                case "minute":
-                    this.interval = 1000 * 60;
-                    break;
-                case "hr":
-                case "hour":
-                    this.interval = 1000 * 60 * 60;
-                    break;
-                case "day":
-                    this.interval = 1000 * 60 * 60 * 24;
-                    break;
-                default:
-                    throw new Error("Invalid interval " + interval);
-            }
-        }
-        else {
-            this.interval = interval;
-        }
-        this.parentBucket = parentBucket;
-        this.content = 0;
-        this.lastDrip = getMilliseconds();
-    }
-    /**
-     * Remove the requested number of tokens. If the bucket (and any parent
-     * buckets) contains enough tokens this will happen immediately. Otherwise,
-     * the removal will happen when enough tokens become available.
-     * @param count The number of tokens to remove.
-     * @returns A promise for the remainingTokens count.
-     */
-    async removeTokens(count) {
-        // Is this an infinite size bucket?
-        if (this.bucketSize === 0) {
-            return Number.POSITIVE_INFINITY;
-        }
-        // Make sure the bucket can hold the requested number of tokens
-        if (count > this.bucketSize) {
-            throw new Error(`Requested tokens ${count} exceeds bucket size ${this.bucketSize}`);
-        }
-        // Drip new tokens into this bucket
-        this.drip();
-        const comeBackLater = async () => {
-            // How long do we need to wait to make up the difference in tokens?
-            const waitMs = Math.ceil((count - this.content) * (this.interval / this.tokensPerInterval));
-            await wait(waitMs);
-            return this.removeTokens(count);
-        };
-        // If we don't have enough tokens in this bucket, come back later
-        if (count > this.content)
-            return comeBackLater();
-        if (this.parentBucket != undefined) {
-            // Remove the requested from the parent bucket first
-            const remainingTokens = await this.parentBucket.removeTokens(count);
-            // Check that we still have enough tokens in this bucket
-            if (count > this.content)
-                return comeBackLater();
-            // Tokens were removed from the parent bucket, now remove them from
-            // this bucket. Note that we look at the current bucket and parent
-            // bucket's remaining tokens and return the smaller of the two values
-            this.content -= count;
-            return Math.min(remainingTokens, this.content);
-        }
-        else {
-            // Remove the requested tokens from this bucket
-            this.content -= count;
-            return this.content;
-        }
-    }
-    /**
-     * Attempt to remove the requested number of tokens and return immediately.
-     * If the bucket (and any parent buckets) contains enough tokens this will
-     * return true, otherwise false is returned.
-     * @param {Number} count The number of tokens to remove.
-     * @param {Boolean} True if the tokens were successfully removed, otherwise
-     *  false.
-     */
-    tryRemoveTokens(count) {
-        // Is this an infinite size bucket?
-        if (!this.bucketSize)
-            return true;
-        // Make sure the bucket can hold the requested number of tokens
-        if (count > this.bucketSize)
-            return false;
-        // Drip new tokens into this bucket
-        this.drip();
-        // If we don't have enough tokens in this bucket, return false
-        if (count > this.content)
-            return false;
-        // Try to remove the requested tokens from the parent bucket
-        if (this.parentBucket && !this.parentBucket.tryRemoveTokens(count))
-            return false;
-        // Remove the requested tokens from this bucket and return
-        this.content -= count;
-        return true;
-    }
-    /**
-     * Add any new tokens to the bucket since the last drip.
-     * @returns {Boolean} True if new tokens were added, otherwise false.
-     */
-    drip() {
-        if (this.tokensPerInterval === 0) {
-            const prevContent = this.content;
-            this.content = this.bucketSize;
-            return this.content > prevContent;
-        }
-        const now = getMilliseconds();
-        const deltaMS = Math.max(now - this.lastDrip, 0);
-        this.lastDrip = now;
-        const dripAmount = deltaMS * (this.tokensPerInterval / this.interval);
-        const prevContent = this.content;
-        this.content = Math.min(this.content + dripAmount, this.bucketSize);
-        return Math.floor(this.content) > Math.floor(prevContent);
-    }
-}
-
-/**
- * A generic rate limiter. Underneath the hood, this uses a token bucket plus
- * an additional check to limit how many tokens we can remove each interval.
- *
- * @param options
- * @param options.tokensPerInterval Maximum number of tokens that can be
- *  removed at any given moment and over the course of one interval.
- * @param options.interval The interval length in milliseconds, or as
- *  one of the following strings: 'second', 'minute', 'hour', day'.
- * @param options.fireImmediately Whether or not the promise will resolve
- *  immediately when rate limiting is in effect (default is false).
- */
-class RateLimiter {
-    constructor({ tokensPerInterval, interval, fireImmediately }) {
-        this.tokenBucket = new TokenBucket({
-            bucketSize: tokensPerInterval,
-            tokensPerInterval,
-            interval,
-        });
-        // Fill the token bucket to start
-        this.tokenBucket.content = tokensPerInterval;
-        this.curIntervalStart = getMilliseconds();
-        this.tokensThisInterval = 0;
-        this.fireImmediately = fireImmediately !== null && fireImmediately !== void 0 ? fireImmediately : false;
-    }
-    /**
-     * Remove the requested number of tokens. If the rate limiter contains enough
-     * tokens and we haven't spent too many tokens in this interval already, this
-     * will happen immediately. Otherwise, the removal will happen when enough
-     * tokens become available.
-     * @param count The number of tokens to remove.
-     * @returns A promise for the remainingTokens count.
-     */
-    async removeTokens(count) {
-        // Make sure the request isn't for more than we can handle
-        if (count > this.tokenBucket.bucketSize) {
-            throw new Error(`Requested tokens ${count} exceeds maximum tokens per interval ${this.tokenBucket.bucketSize}`);
-        }
-        const now = getMilliseconds();
-        // Advance the current interval and reset the current interval token count
-        // if needed
-        if (now < this.curIntervalStart || now - this.curIntervalStart >= this.tokenBucket.interval) {
-            this.curIntervalStart = now;
-            this.tokensThisInterval = 0;
-        }
-        // If we don't have enough tokens left in this interval, wait until the
-        // next interval
-        if (count > this.tokenBucket.tokensPerInterval - this.tokensThisInterval) {
-            if (this.fireImmediately) {
-                return -1;
-            }
-            else {
-                const waitMs = Math.ceil(this.curIntervalStart + this.tokenBucket.interval - now);
-                await wait(waitMs);
-                const remainingTokens = await this.tokenBucket.removeTokens(count);
-                this.tokensThisInterval += count;
-                return remainingTokens;
-            }
-        }
-        // Remove the requested number of tokens from the token bucket
-        const remainingTokens = await this.tokenBucket.removeTokens(count);
-        this.tokensThisInterval += count;
-        return remainingTokens;
-    }
-    /**
-     * Attempt to remove the requested number of tokens and return immediately.
-     * If the bucket (and any parent buckets) contains enough tokens and we
-     * haven't spent too many tokens in this interval already, this will return
-     * true. Otherwise, false is returned.
-     * @param {Number} count The number of tokens to remove.
-     * @param {Boolean} True if the tokens were successfully removed, otherwise
-     *  false.
-     */
-    tryRemoveTokens(count) {
-        // Make sure the request isn't for more than we can handle
-        if (count > this.tokenBucket.bucketSize)
-            return false;
-        const now = getMilliseconds();
-        // Advance the current interval and reset the current interval token count
-        // if needed
-        if (now < this.curIntervalStart || now - this.curIntervalStart >= this.tokenBucket.interval) {
-            this.curIntervalStart = now;
-            this.tokensThisInterval = 0;
-        }
-        // If we don't have enough tokens left in this interval, return false
-        if (count > this.tokenBucket.tokensPerInterval - this.tokensThisInterval)
-            return false;
-        // Try to remove the requested number of tokens from the token bucket
-        const removed = this.tokenBucket.tryRemoveTokens(count);
-        if (removed) {
-            this.tokensThisInterval += count;
-        }
-        return removed;
-    }
-    /**
-     * Returns the number of tokens remaining in the TokenBucket.
-     * @returns {Number} The number of tokens remaining.
-     */
-    getTokensRemaining() {
-        this.tokenBucket.drip();
-        return this.tokenBucket.content;
-    }
-}
-
-const _IZH7Al = defineEventHandler(async (event) => {
-  const ip = getRequestHeader(event, "x-forwarded-for");
-  const routeRules = getRouteRules(event);
-  if (routeRules.security.rateLimiter !== false) {
-    if (!cache.get(ip)) {
-      const cachedLimiter = new RateLimiter(routeRules.security.rateLimiter);
-      cache.put(ip, cachedLimiter, 1e4);
-    } else {
-      const cachedLimiter = cache.get(ip);
-      if (cachedLimiter.getTokensRemaining() > 1) {
-        await cachedLimiter.removeTokens(1);
-        cache.put(ip, cachedLimiter, 1e4);
-      } else {
-        const tooManyRequestsError = {
-          statusCode: 429,
-          statusMessage: "Too Many Requests"
-        };
-        if (routeRules.security.rateLimiter.throwError === false) {
-          return tooManyRequestsError;
-        }
-        throw createError(tooManyRequestsError);
-      }
-    }
-  }
-});
-
-const _lSbD8L = defineEventHandler(async (event) => {
-  const routeRules = getRouteRules(event);
-  const xssValidator = new FilterXSS(routeRules.security.xssValidator);
-  if (routeRules.security.xssValidator !== false) {
-    if (["POST", "GET"].includes(event.node.req.method)) {
-      const valueToFilter = event.node.req.method === "GET" ? getQuery(event) : await readBody(event);
-      if (valueToFilter && Object.keys(valueToFilter).length) {
-        if (valueToFilter.statusMessage && valueToFilter.statusMessage !== "Bad Request")
-          return;
-        const stringifiedValue = JSON.stringify(valueToFilter);
-        const processedValue = xssValidator.process(JSON.stringify(valueToFilter));
-        if (processedValue !== stringifiedValue) {
-          const badRequestError = { statusCode: 400, statusMessage: "Bad Request" };
-          if (routeRules.security.requestSizeLimiter.throwError === false) {
-            return badRequestError;
-          }
-          throw createError(badRequestError);
-        }
-      }
-    }
-  }
-});
-
-const _FylHgw = defineEventHandler((event) => {
-  const routeRules = getRouteRules(event);
-  handleCors(event, routeRules.security.corsHandler);
-});
-
 const _lazy_5GsIJx = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
   { route: '/__nuxt_error', handler: _lazy_5GsIJx, lazy: true, middleware: false, method: undefined },
-  { route: '', handler: _giT3OP, lazy: false, middleware: false, method: undefined },
-  { route: '', handler: _IZH7Al, lazy: false, middleware: false, method: undefined },
-  { route: '', handler: _lSbD8L, lazy: false, middleware: false, method: undefined },
-  { route: '', handler: _FylHgw, lazy: false, middleware: false, method: undefined },
   { route: '/**', handler: _lazy_5GsIJx, lazy: true, middleware: false, method: undefined }
 ];
 
@@ -987,6 +617,14 @@ const errorDev = /*#__PURE__*/Object.freeze({
 const appRootId = "__nuxt";
 
 const appRootTag = "div";
+
+function buildAssetsURL(...path) {
+  return joinURL(publicAssetsURL(), useRuntimeConfig().app.buildAssetsDir, ...path);
+}
+function publicAssetsURL(...path) {
+  const publicBase = useRuntimeConfig().app.cdnURL || useRuntimeConfig().app.baseURL;
+  return path.length ? joinURL(publicBase, ...path) : publicBase;
+}
 
 globalThis.__buildAssetsURL = buildAssetsURL;
 globalThis.__publicAssetsURL = publicAssetsURL;

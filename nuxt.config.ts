@@ -3,7 +3,6 @@ export default defineNuxtConfig({
   modules: [
     "@nuxtjs/apollo",
     "nuxt-gtag",
-    "nuxt-security",
     "@nuxtjs/tailwindcss",
   ],
 
@@ -19,36 +18,6 @@ export default defineNuxtConfig({
   },
   gtag: {
     id: process.env.GOOGLE_ANALYTICS_ID,
-  },
-
-  security: {
-    headers: {
-      crossOriginEmbedderPolicy: "unsafe-none",
-
-      contentSecurityPolicy: {
-        "script-src": [
-          " https://www.googleanalytics.com",
-          "https://www.google-analytics.com",
-          "https://www.googleoptimize.com",
-          "https://www.googletagmanager.com",
-          "https://embed.tawk.to",
-          "https://connect.facebook.net",
-          "https://cdn.jsdelivr.net",
-          "'self'",
-          "'unsafe-inline'",
-        ],
-        "font-src": ["'self'", "https:", "data:"],
-        "style-src": ["'self'", "https:", "'unsafe-inline'"],
-        "img-src": [
-          "'self'",
-          "data:",
-          "https://www.google-analytics.com",
-          "https://www.googletagmanager.com",
-          "https://www.facebook.com",
-          "https://embed.tawk.to",
-        ],
-      },
-    },
   },
 
   app: {
