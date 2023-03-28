@@ -49,6 +49,11 @@ export default defineNuxtConfig({
         {
           src: "./metaPixel.js",
         },
+        {
+          hid: "tawk.to",
+          src: "https://embed.tawk.to/641fc1b94247f20fefe8033b/1gse0pfrd",
+          defer: true,
+        },
       ],
       noscript: [
         {
