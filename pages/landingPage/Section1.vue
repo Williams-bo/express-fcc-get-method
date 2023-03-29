@@ -3,14 +3,14 @@
         <div
             class=" flex flex-col space-y-10 items-start md:items-center p-5 min-h-[85vh] md:justify-between md:space-y-0 md:space-x-10  md:p-0 md:flex-row md:px-6 lg:px-24 ">
             <div
-                class="flex flex-col text-left w-fit justify-center mt-10 space-y-5 transition-all max-w-[38rem] md:text-left md:min-h-fit">
+                class="flex flex-col text-left w-fit justify-center mt-10 md:mt-0 space-y-5 lg:space-y-10 transition-all max-w-[38rem] md:text-left md:min-h-fit">
 
-                <h1 class=" font-medium text-fadePurple text-4xl md:justify-start md:text-left lg:text-6xl">
-                    Welcome to Ire
+                <h1 class=" font-medium text-fadePurple text-2xl md:justify-start md:text-left lg:text-4xl">
+                    Own a piece of land in one of Nigeria's most secure, beautiful, serene, and fast-growing neighborhoods
                 </h1>
 
-                <p class="text-primaryGrey text-sm lg:text-2xl ">
-                    Powered by nature and technology, but created with you in mind
+                <p class="text-primaryGrey text-sm lg:text-xl ">
+                    IRE's value has grown by 43% in the last 6 months. Take advantage of this offer.
                 </p>
 
 
@@ -21,11 +21,22 @@
                         design="btn-xl bg-white text-veryDarkBlue rounded-full" />
                 </div>
 
+                <div class="text-veryDarkBlue">
+                    <h4 class="text-[1.2rem] lg:text-[1.4rem] font-medium  md:justify-start md:text-left">
+                        Got questions?
+                    </h4>
+
+                    <p class="text-xs lg:text-sm ">
+                        Get in touch with someone on our team to answer all your questions right now
+                    </p>
+
+                </div>
+
             </div>
 
             <div
                 class="relative flex justify-start items-start min-h-[40vh] max-h-fit w-full md:w-[35rem] md:block md:h-fit">
-                <div class="h-full relative">
+                <!-- <div class="h-full relative">
                     <img :src="propsImg" alt="props" class="w-[20rem] md:w-full">
                     <button @click="playVideo"
                         class="play-btn w-[5rem] absolute overflow-hidden flex items-center bg-white rounded-large bottom-4 md:bottom-[2.6rem] left-3 md:left-[2rem]">
@@ -35,9 +46,9 @@
                             <p class="text-primaryGrey w-[8rem]">1:06mins</p>
                         </div>
                     </button>
-                </div>
-                <div v-show="showVideo" class="absolute top-0 h-full w-full bg-[#F4F2FE] flex justify-center items-center">
-                    <div class="bg-[#F4F2FE] flex justify-center items-center h-[70%] w-full  lg:h-1/2">
+                </div> -->
+                <div class="absolute top-0 h-full w-full bg-[#F4F2FE] flex justify-center items-start md:items-center ">
+                    <div class="bg-[#F4F2FE] flex justify-center items-center h-[70%] w-full  lg:h-full">
                         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/2jPAYEOWjwI?mute=1"
                             title="Ire video" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -91,12 +102,12 @@ import play from '../../assets/images/icons/Player.svg'
 const modalState = useModalState()
 const showVideo = ref(false)
 
-const playVideo = () => {
-    showVideo.value = true
-    setTimeout(() => {
-        showVideo.value = false
-    }, 150000)
-}
+// const playVideo = () => {
+//     showVideo.value = true
+//     setTimeout(() => {
+//         showVideo.value = false
+//     }, 150000)
+// }
 
 const setForm = (title) => {
     modalState.value.showForm = true
@@ -154,4 +165,5 @@ const scroll = (section) => {
     50% {
         transform: translateX(0);
     }
-}</style>
+}
+</style>

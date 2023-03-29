@@ -11,17 +11,17 @@
                 </NuxtLink>
 
                 <div
-                    class="hidden w-[80%] xl:w-[70%] justify-between space-x-5 items-center md:flex md:justify-end lg:justify-between">
+                    class="hidden w-[80%] lg:w-[75%] xl:w-[70%] justify-between space-x-5 items-center md:flex md:justify-end lg:justify-between">
 
                     <div
-                        class="hidden bg-white py-3 px-5 xl:px-20 rounded-large self-center space-x-7 md:flex cursor-pointer text-veryDarkBlue text-sm">
-                        <NuxtLink @click="scroll(3)"
+                        class="hidden bg-white py-3 px-5 lg:px-10 xl:px-20 rounded-large self-center space-x-7 md:flex cursor-pointer text-veryDarkBlue text-sm">
+                        <NuxtLink @click="scroll(4)"
                             class="text-veryDarkBlue transition-all duration-300 hover:text-darkGrey">Features
                         </NuxtLink>
                         <NuxtLink @click="scroll(1)" class=" transition-all duration-300 hover:text-darkGrey">
                             Gallery
                         </NuxtLink>
-                        <NuxtLink @click="scroll(6)" class=" transition-all duration-300 hover:text-darkGrey">
+                        <NuxtLink @click="scroll(7)" class=" transition-all duration-300 hover:text-darkGrey">
                             FAQs
                         </NuxtLink>
                         <NuxtLink @click="modalState.showForm = true" class=" transition-all duration-300 hover:text-darkGrey">

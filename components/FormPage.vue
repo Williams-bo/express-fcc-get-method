@@ -14,7 +14,7 @@
                             {{ modalState.formTitle }}
                         </h2>
                         <p class="text-darkGrey text-base mt-2">
-                            We want to hear from you. Let us know how we can help.
+                            We will never share your information with anyone
                         </p>
                     </div>
                     <form @submit.prevent="submitForm" class="flex flex-wrap gap-x-6 gap-y-8 mt-10">
