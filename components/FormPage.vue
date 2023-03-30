@@ -97,7 +97,7 @@ const formResult = ref({
 const { mutate: addFormRequest } = useMutation(CREATE_FORM_REQUEST, formResult.value);
 
 const submitForm = async () => {
-    // call addFormRequest function to add comment
+    // call addFormRequest function
     const { data } = await addFormRequest({ input: { data: formResult.value, title: "BOOK_INSPECTION_FOR_IRE" } });
 
     modalState.value.showForm = false;
