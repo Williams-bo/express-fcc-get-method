@@ -93,7 +93,7 @@ const formResult = ref({
     message: '',
 })
 
-// destructure useMutation composable to obtain mutate frunction and rename it to `addComment`
+// destructure useMutation composable to obtain mutate frunction and rename it to `addFormRequest`
 const { mutate: addFormRequest } = useMutation(CREATE_FORM_REQUEST, formResult.value);
 
 const submitForm = async () => {
