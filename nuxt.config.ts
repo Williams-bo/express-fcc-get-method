@@ -41,6 +41,9 @@ export default defineNuxtConfig({
       ],
       script: [
         {
+          src: "./GTM.js",
+        },
+        {
           hid: "tawk.to",
           src: "https://embed.tawk.to/641fc1b94247f20fefe8033b/1gse0pfrd",
           defer: true,
@@ -49,10 +52,10 @@ export default defineNuxtConfig({
       noscript: [
         {
           innerHTML: `<iframe 
-          src=""https://www.googletagmanager.com/ns.html?id=GTM-T7MMMXS""
-          height=""0"" 
-          width=""0"" 
-          style=""display:none;visibility:hidden"">
+          src="https://www.googletagmanager.com/ns.html?id=GTM-T7MMMXS"
+          height="0" 
+          width="0"
+          style="display:none;visibility:hidden">
           </iframe>`,
         },
       ],
