@@ -1,23 +1,19 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: [
-    "@nuxtjs/apollo",
-    "nuxt-gtag",
-    "@nuxtjs/tailwindcss",
-  ],
+  modules: ["@nuxtjs/apollo", "nuxt-gtag", "@nuxtjs/tailwindcss"],
 
   apollo: {
     clients: {
       default: {
         httpEndpoint:
           process.env.NODE_ENV === "production"
-            ? "http://52.12.111.247:3000/graphql"
+            ? "https://wildcard-vety3kdfea-uc.a.run.app/graphql"
             : "http://localhost:3000/graphql",
       },
     },
   },
   gtag: {
-    id: process.env.GOOGLE_ANALYTICS_ID,
+    id: process.env.GOOGLE_TAG_ID,
   },
 
   app: {
@@ -45,16 +41,6 @@ export default defineNuxtConfig({
       ],
       script: [
         {
-          src: "https://www.googleoptimize.com/optimize.js?id=OPT-KJ87392",
-          tagPriority: "high",
-        },
-        {
-          src: "./googleAnalytics.js",
-        },
-        {
-          src: "./metaPixel.js",
-        },
-        {
           hid: "tawk.to",
           src: "https://embed.tawk.to/641fc1b94247f20fefe8033b/1gse0pfrd",
           defer: true,
@@ -62,12 +48,12 @@ export default defineNuxtConfig({
       ],
       noscript: [
         {
-          innerHTML: `<img
-          height="1"
-          width="1"
-          style="display:none"
-          src="https://www.facebook.com/tr?id=148745654488888&ev=PageView&noscript=1"
-        />`,
+          innerHTML: `<iframe 
+          src=""https://www.googletagmanager.com/ns.html?id=GTM-T7MMMXS""
+          height=""0"" 
+          width=""0"" 
+          style=""display:none;visibility:hidden"">
+          </iframe>`,
         },
       ],
     },

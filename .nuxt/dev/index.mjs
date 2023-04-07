@@ -21,7 +21,7 @@ import unstorage_47drivers_47fs from 'file:///Users/mac/Desktop/ire/node_modules
 import defu from 'file:///Users/mac/Desktop/ire/node_modules/defu/dist/defu.mjs';
 import { toRouteMatcher, createRouter } from 'file:///Users/mac/Desktop/ire/node_modules/radix3/dist/index.mjs';
 
-const _runtimeConfig = {"app":{"baseURL":"/","buildAssetsDir":"/_nuxt/","cdnURL":""},"nitro":{"envPrefix":"NUXT_","routeRules":{"/__nuxt_error":{"cache":false}}},"public":{"gtag":{"id":"G-6S8HQWDEPZ","config":""}}};
+const _runtimeConfig = {"app":{"baseURL":"/","buildAssetsDir":"/_nuxt/","cdnURL":""},"nitro":{"envPrefix":"NUXT_","routeRules":{"/__nuxt_error":{"cache":false}}},"public":{"gtag":{"id":"GTM-T7MMMXS","config":""}}};
 const ENV_PREFIX = "NITRO_";
 const ENV_PREFIX_ALT = _runtimeConfig.nitro.envPrefix ?? process.env.NITRO_ENV_PREFIX ?? "_";
 const getEnv = (key) => {
@@ -815,7 +815,7 @@ const renderer$1 = /*#__PURE__*/Object.freeze({
   default: renderer
 });
 
-const _virtual__headStatic = {"headTags":"<meta charset=\"utf-8\">\n<title>Ire Centenum</title>\n<script src=\"https://www.googleoptimize.com/optimize.js?id=OPT-KJ87392\"></script>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<meta name=\"description\" content=\"Powered by nature and technology, but created with you in mind\">\n<meta name=\"format-detection\" content=\"telephone=no\">\n<link rel=\"stylesheet\" href=\"https://fonts.cdnfonts.com/css/sf-pro-display\">\n<link rel=\"icon\" type=\"image/png\" href=\"./favicon.png\">\n<script src=\"./googleAnalytics.js\"></script>\n<script src=\"./metaPixel.js\"></script>\n<script src=\"https://embed.tawk.to/641fc1b94247f20fefe8033b/1gse0pfrd\" defer=\"\"></script>\n<noscript><img\n          height=\"1\"\n          width=\"1\"\n          style=\"display:none\"\n          src=\"https://www.facebook.com/tr?id=148745654488888&ev=PageView&noscript=1\"\n        /></noscript>","bodyTags":"","bodyTagsOpen":"","htmlAttrs":"","bodyAttrs":""};
+const _virtual__headStatic = {"headTags":"<meta charset=\"utf-8\">\n<title>Ire Centenum</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<meta name=\"description\" content=\"Powered by nature and technology, but created with you in mind\">\n<meta name=\"format-detection\" content=\"telephone=no\">\n<link rel=\"stylesheet\" href=\"https://fonts.cdnfonts.com/css/sf-pro-display\">\n<link rel=\"icon\" type=\"image/png\" href=\"./favicon.png\">\n<script src=\"https://embed.tawk.to/641fc1b94247f20fefe8033b/1gse0pfrd\" defer=\"\"></script>\n<noscript><iframe \n          src=\"\"https://www.googletagmanager.com/ns.html?id=GTM-T7MMMXS\"\"\n          height=\"\"0\"\" \n          width=\"\"0\"\" \n          style=\"\"display:none;visibility:hidden\"\">\n          </iframe></noscript>","bodyTags":"","bodyTagsOpen":"","htmlAttrs":"","bodyAttrs":""};
 
 const _virtual__headStatic$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
