@@ -76,7 +76,7 @@ const modalState = useModalState()
 const CREATE_FORM_REQUEST = gql`
   mutation CreateFormRequest($input: FormRequestInput!) {
     createFormRequest(input: $input) {
-      id
+      _id
       data
       title
     }
