@@ -50,7 +50,7 @@ const quotes = ref([
     {
         name: 'Maleek, Lagos.',
         quote: `"I contacted the team about purchasing two plots and this turned out to be the most seamless real estate transaction
-                 I've ever done. In less than a week, all the required documentation was done and I now have a piece of IRE!"`
+                 I've ever done. In less than a week, all the required documentation was done and I now have a piece of CHARIS VILLE!"`
     },
     {
         name: 'Faith, Ilorin',
@@ -59,12 +59,12 @@ const quotes = ref([
     },
     {
         name: 'JohnPaul, Ontario',
-        quote: `"Bought Ire some months ago and I've not had any reason to fret even though I'm based outside the country.
+        quote: `"Bought Charis ville some months ago and I've not had any reason to fret even though I'm based outside the country.
                  It feels good to have an investment like this back home."`
     },
     {
         name: 'Mr. Akindele, Lagos.',
-        quote: `"Ire is real. I booked a site inspection and was taken to the inspection site. 
+        quote: `"Charis ville is real. I booked a site inspection and was taken to the inspection site. 
                 There's a lot of possibilities there and the area is a dry land, very good for building. Thumbs-up to the team "`
     },
 ])

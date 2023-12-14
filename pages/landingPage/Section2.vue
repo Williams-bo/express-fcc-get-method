@@ -5,7 +5,7 @@
                 Did you know
             </h2>
             <p class="text-xs md:text-lg lg:text-xl text-fadePurple  ">
-                Ire is a word in the Yoruba language that means “Goodness” when translated to English.
+                Charis Ville embodies a community of serenity and gracefulness.
             </p>
         </div>
 
@@ -80,10 +80,8 @@
             <div class=" flex flex-col justify-evenly  min-h-[50vh]">
                 <LandPlanDropdown name="300 SQM (Half Plot)"
                     offer="You'll also get a Receipt, Contract of Sale and Global C of O." price="₦5,000,000" />
-                <LandPlanDropdown name="450 SQM (3 Quarter Plot)"
+                <LandPlanDropdown name="500 SQM (3 Quarter Plot)"
                     offer="You'll also get a Receipt, Contract of Sale and Global C of O." price="₦7,500,000" />
-                <LandPlanDropdown name="600 SQM (Full Plot)"
-                    offer="You'll also get a Receipt, Contract of Sale and Global C of O." price="₦9,000,000" />
             </div>
 
             <div class="h-[20rem] lg:h-[50vh]">

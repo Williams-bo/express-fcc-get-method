@@ -10,7 +10,7 @@
                 </h1>
 
                 <p class="text-primaryGrey text-sm lg:text-xl ">
-                    IRE's value has grown by 43% in the last 6 months. Take advantage of this offer.
+                    CHARIS VILLE's value has grown by 43% in the last 6 months. Take advantage of this offer.
                 </p>
 
 
