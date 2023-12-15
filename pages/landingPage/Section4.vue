@@ -6,7 +6,7 @@
             </h2>
             <div class="transition container-bg bg-white w-[90%] md:w-[70%] p-10 lg:px-20">
                 <FaqDropdown question="Where is CHARIS VILLE located?"
-                    answer="Charis ville is a budding smart city located in the heart of Mowe, Ogun State." />
+                    answer="Charis Ville is a budding smart city located in the heart of Mowe, Ogun State." />
                 <FaqDropdown question="What documents are available for me when I purchase?"
                     answer="Upon payment, you receive a Global C of O. You'll also get your receipts and sales contract." />
                 <FaqDropdown question="Can I pay in installments?"
@@ -14,7 +14,7 @@
                 <FaqDropdown question="Can I survey the land?"
                     answer="Definitely! Click 'book an inspection' and a member of our team would reach out to you to arrange one." />
                 <div v-show="viewMore" class="transition">
-                    <FaqDropdown question="How can I invest in Charis ville?">
+                    <FaqDropdown question="How can I invest in Charis Ville?">
                         <p class="">Simply fill the
                             <button @click="setForm('Get Started')" class="underline">'Request a Call' </button> to begin.
                             form and a member of our team would reach out to you with the necessary details.
@@ -34,7 +34,7 @@
                     </FaqDropdown>
                     <FaqDropdown question="Are there restrictions on building types?"
                         answer="No, however approvals are necessary before construction begins." />
-                    <FaqDropdown question="Is it a dry land or swampy area?" answer="Charis ville is a dry land." />
+                    <FaqDropdown question="Is it a dry land or swampy area?" answer="Charis Ville is a dry land." />
                     <FaqDropdown question="What development will be done?"
                         answer="Perimeter Fencing, Gatehouse, Land Parcellation and Land clearing" />
                 </div>
