@@ -59,12 +59,12 @@ const quotes = ref([
     },
     {
         name: 'JohnPaul, Ontario',
-        quote: `"Bought Charis ville some months ago and I've not had any reason to fret even though I'm based outside the country.
+        quote: `"Bought Charis Ville some months ago and I've not had any reason to fret even though I'm based outside the country.
                  It feels good to have an investment like this back home."`
     },
     {
         name: 'Mr. Akindele, Lagos.',
-        quote: `"Charis ville is real. I booked a site inspection and was taken to the inspection site. 
+        quote: `"Charis Ville is real. I booked a site inspection and was taken to the inspection site. 
                 There's a lot of possibilities there and the area is a dry land, very good for building. Thumbs-up to the team "`
     },
 ])
